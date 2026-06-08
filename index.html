@@ -141,6 +141,7 @@
     transition:background .15s ease,padding-left .15s ease;
   }
   .show:hover{background:rgba(168,85,247,.07);padding-left:14px}
+  .show.vid{grid-template-columns:1fr auto}
   .show .date{font-family:'Archivo Black',sans-serif;font-size:1.4rem;color:var(--purple-2);line-height:1}
   .show .date small{display:block;font-family:'Space Grotesk';font-size:.7rem;color:var(--muted);font-weight:500;margin-top:4px}
   .show .where b{display:block;font-size:1.1rem;font-weight:700}
@@ -154,6 +155,16 @@
     border-radius:24px;padding:46px 36px;text-align:center;
   }
   .listen h2{margin-bottom:14px}
+  .toptracks{max-width:640px;margin:0 auto 30px;text-align:left;display:flex;flex-direction:column;gap:2px}
+  .toptracks .tt-head{font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;text-align:center}
+  .track{
+    display:flex;align-items:center;gap:14px;padding:11px 14px;border-radius:12px;
+    text-decoration:none;transition:background .15s;
+  }
+  .track:hover{background:rgba(255,255,255,.06)}
+  .track .num{font-family:'Archivo Black',sans-serif;color:var(--purple-2);width:24px;font-size:1rem}
+  .track .tname{flex:1;font-weight:600}
+  .track .play{color:var(--spotify);font-size:.78rem;opacity:.85}
   .player{margin:0 auto 8px;max-width:640px}
   .player iframe{border-radius:14px;width:100%;display:block}
   .player-fallback{
@@ -204,37 +215,21 @@
       <div class="kicker">A banda</div>
       <h2>Dez anos de<br>década turva</h2>
       <p class="lead">
-        <strong>MAQUINAS</strong> é banda de Fortaleza/CE. Rock, ruído e poesia.
-        Dez anos de estrada celebrados na turnê <strong>Década Turva</strong>, rodando o Brasil —
-        de Curitiba a Brasília, do Rio a São Paulo.
+        <strong>MAQUINAS</strong> — <em>lovers jazz rock</em> de Fortaleza/CE. Shoegaze, post-rock e
+        ruído romântico desde 2012. Quinteto: Allan Dias, Roberto Borges, Yuri Costa,
+        Gabriel de Sousa e Ayla Lemos. Dez anos de estrada celebrados na turnê
+        <strong>Década Turva</strong>. Disco <strong>O Cão de Toda Noite</strong> e o single novo
+        <strong>Te Estranho</strong> nas plataformas.
       </p>
     </section>
 
     <section class="block wrap" id="shows">
       <div class="kicker">Agenda</div>
-      <h2>Próximos shows</h2>
-      <div class="shows">
-        <!-- edite as datas conforme a turnê -->
-        <a class="show" href="https://linktr.ee/maquinasbanda" target="_blank" rel="noopener">
-          <div class="date">05/10<small>2025</small></div>
-          <div class="where"><b>Curitiba</b><span>Wonka Bar — R. Trajano Reis, 326</span></div>
-          <div class="meta">19h · gratuito</div>
-        </a>
-        <a class="show" href="https://linktr.ee/maquinasbanda" target="_blank" rel="noopener">
-          <div class="date">09/10<small>2025</small></div>
-          <div class="where"><b>São Paulo</b><span>fffront — R. Purpurina, 199</span></div>
-          <div class="meta">19h · gratuito</div>
-        </a>
-        <a class="show" href="https://linktr.ee/maquinasbanda" target="_blank" rel="noopener">
-          <div class="date">10/10<small>2025</small></div>
-          <div class="where"><b>Rio de Janeiro</b><span>Futuro Arte e Tecnologia — R. dois de dezembro, 63</span></div>
-          <div class="meta">19h · gratuito</div>
-        </a>
-        <a class="show" href="https://linktr.ee/maquinasbanda" target="_blank" rel="noopener">
-          <div class="date">19/11<small>2025</small></div>
-          <div class="where"><b>Brasília</b><span>SCS 506 bloco a loja 67 — praça das avós</span></div>
-          <div class="meta">20h30 · gratuito</div>
-        </a>
+      <h2>Shows</h2>
+      <p class="lead">As próximas datas saem primeiro no Instagram e no Linktree da banda. Confira a agenda atualizada:</p>
+      <div class="cta-row" style="justify-content:flex-start;margin-top:28px">
+        <a class="btn btn-ghost" href="https://instagram.com/maquinasbanda" target="_blank" rel="noopener">Agenda no Instagram</a>
+        <a class="btn btn-ghost" href="https://linktr.ee/maquinasbanda" target="_blank" rel="noopener">Ingressos / Linktree</a>
       </div>
     </section>
 
@@ -242,7 +237,17 @@
       <div class="listen">
         <div class="kicker">Streaming</div>
         <h2>Coloca pra tocar</h2>
-        <p class="lead" style="margin:0 auto 28px">Disco novo, singles e a discografia completa. Dá o play aqui mesmo:</p>
+        <p class="lead" style="margin:0 auto 28px">As mais tocadas e a discografia completa. Dá o play aqui mesmo:</p>
+
+        <!-- MAIS TOCADAS NO SPOTIFY -->
+        <div class="toptracks">
+          <div class="tt-head">Mais tocadas</div>
+          <a class="track" href="https://open.spotify.com/artist/25nahlb6zTMSuEX0ZgLsUT" target="_blank" rel="noopener"><span class="num">1</span><span class="tname">Zolpidem</span><span class="play">▶ ouvir</span></a>
+          <a class="track" href="https://open.spotify.com/artist/25nahlb6zTMSuEX0ZgLsUT" target="_blank" rel="noopener"><span class="num">2</span><span class="tname">Maus Hábitos</span><span class="play">▶ ouvir</span></a>
+          <a class="track" href="https://open.spotify.com/artist/25nahlb6zTMSuEX0ZgLsUT" target="_blank" rel="noopener"><span class="num">3</span><span class="tname">O Silêncio É Vermelho</span><span class="play">▶ ouvir</span></a>
+          <a class="track" href="https://open.spotify.com/artist/25nahlb6zTMSuEX0ZgLsUT" target="_blank" rel="noopener"><span class="num">4</span><span class="tname">Quarto Mudo</span><span class="play">▶ ouvir</span></a>
+          <a class="track" href="https://open.spotify.com/artist/25nahlb6zTMSuEX0ZgLsUT" target="_blank" rel="noopener"><span class="num">5</span><span class="tname">Corpo Frágil</span><span class="play">▶ ouvir</span></a>
+        </div>
 
         <!-- PLAYER EMBUTIDO DO SPOTIFY -->
         <div id="spotify-player" class="player"></div>
@@ -251,8 +256,28 @@
           <a class="pill" href="https://open.spotify.com/artist/25nahlb6zTMSuEX0ZgLsUT" target="_blank" rel="noopener">Spotify</a>
           <a class="pill" href="https://music.apple.com/br/search?term=maquinas%20banda" target="_blank" rel="noopener">Apple Music</a>
           <a class="pill" href="https://www.youtube.com/results?search_query=maquinas+banda" target="_blank" rel="noopener">YouTube</a>
+          <a class="pill" href="https://maquinas.bandcamp.com" target="_blank" rel="noopener">Bandcamp</a>
           <a class="pill" href="https://linktr.ee/maquinasbanda" target="_blank" rel="noopener">Linktree</a>
         </div>
+      </div>
+    </section>
+
+    <section class="block wrap" id="videos">
+      <div class="kicker">Vídeos & destaques</div>
+      <h2>Pra ver e ouvir</h2>
+      <div class="shows" style="border-top:1px solid rgba(255,255,255,.1)">
+        <a class="show vid" href="https://linktr.ee/maquinasbanda" target="_blank" rel="noopener">
+          <div class="where"><b>Te Estranho</b><span>single novo · vídeo no YouTube</span></div><div class="meta">single</div></a>
+        <a class="show vid" href="https://linktr.ee/maquinasbanda" target="_blank" rel="noopener">
+          <div class="where"><b>A radiação na terra — c/ Fernando Catatau</b><span>ao vivo no Porto Dragão · 2024</span></div><div class="meta">ao vivo</div></a>
+        <a class="show vid" href="https://linktr.ee/maquinasbanda" target="_blank" rel="noopener">
+          <div class="where"><b>O Cão de Toda Noite — Ao Vivo</b><span>vídeo do show</span></div><div class="meta">vídeo</div></a>
+        <a class="show vid" href="https://linktr.ee/maquinasbanda" target="_blank" rel="noopener">
+          <div class="where"><b>O Silêncio é Vermelho</b><span>videoclipe</span></div><div class="meta">clipe</div></a>
+        <a class="show vid" href="https://linktr.ee/maquinasbanda" target="_blank" rel="noopener">
+          <div class="where"><b>Fullgás — c/ Clau Aniz</b><span>cover de Marina Lima</span></div><div class="meta">cover</div></a>
+        <a class="show vid" href="https://linktr.ee/maquinasbanda" target="_blank" rel="noopener">
+          <div class="where"><b>Lado Turvo, Lugares Inquietos</b><span>matéria de lançamento · NOISEY / VICE</span></div><div class="meta">imprensa</div></a>
       </div>
     </section>
   </main>
@@ -264,8 +289,7 @@
       <a href="https://open.spotify.com/artist/25nahlb6zTMSuEX0ZgLsUT" target="_blank" rel="noopener">Spotify</a>
       <a href="https://linktr.ee/maquinasbanda" target="_blank" rel="noopener">Linktree</a>
     </div>
-    <div class="copy">© <span id="y"></span> MAQUINAS · Fortaleza, CE</div>
-    <div class="edit-note">// troque o link do Spotify pela URL oficial do artista quando tiver</div>
+    <div class="copy">© <span id="y"></span> MAQUINAS · Fortaleza, CE · lovers jazz rock</div>
   </footer>
 
   <script>
